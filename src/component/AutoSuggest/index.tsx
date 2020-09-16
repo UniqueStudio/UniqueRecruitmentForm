@@ -37,7 +37,8 @@ function AutoSuggest<T>(props: AutoSuggestProps<T>) {
 
     const renderSuggestion = (item: T, { isHighlighted }: { isHighlighted: boolean }) => {
         const suggestion = getItemValue(item);
-        const { menuItem, hightlightedItem, font } = classes;
+        // TODO: fix type inferring
+        const { menuItem, hightlightedItem, font } = classes as any;
         return (
             <MenuItem
                 dense
